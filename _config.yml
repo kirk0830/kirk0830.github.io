@@ -1,3 +1,28 @@
 theme: jekyll-theme-cayman
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 title: Qc_1st-principle_u_need_2_know
 description: another self-established platform for sharing knowledge about quantum chemistry, first-principles and simulation techniques.

@@ -1,0 +1,11 @@
+已经安装好了gem, ruby, rubygem, jekyll
+
+以及debug还需要安装另外四个包，webrick...
+
+使用gem install XXX来安装新的包
+在文件Gemfile里调用新的包
+使用bundle命令来刷新网站的依赖项
+
+使用jekyll server来渲染网页
+jekyll server --livereload来时刻刷新网页
+前提是进入网站的根目录
