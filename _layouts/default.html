@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
+    
+    {% if page.use_math %}
+    {% include mathjax_support.html %}
+    {% endif %}
   </head>
   <body>
     {% include navigation.html %}
