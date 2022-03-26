@@ -1,7 +1,8 @@
 <nav>
     {% for item in site.data.navigation %}
     <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="{{ item.link }}" >{{ item.name }}</a>
+    <a href="{{ item.link }}" ><b>{{ item.name }}</b></a> - 
     <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
     {% endfor %}
+    :p
 </nav>

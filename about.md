@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-# About
+# 这个GitHub Page的由来
 
 大家好。
 在这个站点设立之前，相关内容一直都是发布在知乎。然而因为种种原因，知乎禁止了我的正常使用。根据以往知乎记录在案我的违规，日期最近一条是我在“想法”分享了题为<a href="https://mp.weixin.qq.com/s/7i3gitv9YY8r_QVDFGYcog">《不能继续助长部分中国大学生的好逸恶劳思潮》</a>的微信推送，被自动判定为“包含法律法规禁止或可能引起争议的内容”；
@@ -31,10 +31,15 @@ title: About
 最后我要说，我始终拥护我的祖国，但不代表我拥护依附在我的祖国概念上的一切。不代表拥护某些在其位不谋其政的人，更不代表我拥护以上交部分数据给某些境外部门，以通过审查得到境外股市上市资格的公司。至少是2018年，某公司已经改口称自己是一家“全球公司”，2019年，covid19在国内爆发时某社交平台上谣言肆虐，2020年，某平台已经成为了制造性别对立矛盾的最大线上窝点，2021年，某公司已经向境外部门上交了我国的地理信息。
 
 Stand with our motherland, keep in mind the question who is our enemy.
+
 Fight against slack though, 
+
 Fight against corrpution, 
+
 Fight against ignorance, lazyness, arrogance, greedy, self-abasement, vanity.
+
 Fight for our motherland, our dignity, our freedom, our friends and families.
+
 Fight for communism.
 
 Kirk, 2022/03/26 in France
