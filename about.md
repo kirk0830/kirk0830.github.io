@@ -32,7 +32,7 @@ title: About
 
 Stand with our motherland, keep in mind the question who is our enemy.
 
-Fight against slack though, 
+Fight against slack thoughts, 
 
 Fight against corrpution, 
 
