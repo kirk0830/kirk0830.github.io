@@ -1,0 +1,2 @@
+nativation.yml records pages which show its links always.
+for Home, it is a special variable and its link is set to "/" indicates index.html, while for other variables, their link should be clearly defined.

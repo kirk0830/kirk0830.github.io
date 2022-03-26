@@ -1,0 +1,14 @@
+syntax, for html
+to use variables, use {% %} to state an operation on varaible.
+for sentence site.data.navigation, it will visit from 
+root -> site
+then subdirectory _data -> data
+then the file navigation.yml -> navigation
+then variables in it, Homw, Blog, Staff, About.
+
+define a link use <a ...>, in this bracket attach its link with href=..., here use a varaible, so call it with double curve bracket
+{{ item.link }}. while item is one of variables defined in navigation.yml and,
+calling one of item "Home", its name is called by item.name, although this varaible is created by its name...
+and its link is called by item.link
+
+for page.url, i dont know presently
