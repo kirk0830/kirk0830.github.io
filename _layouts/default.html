@@ -6,9 +6,6 @@
     <!-- encoding: utf-8 -->
     <title>{{ page.title }}</title>
     <!-- 显示当前页面（page）的标题，前提是page.title确实存在且可以访问 -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- 链接stylesheet以设置部分格式，比如styles.css已经设置了inlcude main.css -->
-    <!-- main.css中定义了对于“current”，指定其字体显示为绿色。 -->
     {% if page.use_math %}
       {% include _mathjax_support.html %}
       <!--注意！使用include的前提是Include的html已经存储在_includes文件夹中-->
