@@ -1,6 +1,6 @@
 title: Qc_1st-principle_u_need_2_know
 description: another self-established platform for sharing knowledge about quantum chemistry, first-principles and simulation techniques.
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
 markdown: Kramdown
 
 # website structure related
