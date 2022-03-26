@@ -4,7 +4,7 @@
     <!--头部分用来声明include调用库，以及设置部分格式-->
     <meta charset="utf-8">
     <!-- encoding: utf-8 -->
-    <title>Home</title>
+    <title>Article</title>
     <!-- 显示当前页面（page）的标题，前提是page.title确实存在且可以访问 -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- 链接stylesheet以设置部分格式，比如styles.css已经设置了inlcude main.css -->
@@ -17,7 +17,7 @@
     <nav>
     
     <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/" class="current">Home</a>
+    <a href="/" >Home</a>
     <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
     <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
     <!-- 就标记为绿色:“current” -->
@@ -29,7 +29,7 @@
     <!-- 就标记为绿色:“current” -->
     
     <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/article.html" >Article</a>
+    <a href="/article.html" class="current">Article</a>
     <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
     <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
     <!-- 就标记为绿色:“current” -->
@@ -41,9 +41,30 @@
     <!-- 就标记为绿色:“current” -->
     
 </nav>
-    <h1>Q.C. et 1st-Principle</h1>
-<p>This will be a major site for sharing basic knowledge of quantum chemistry and first principle, 
-    also relevant simulation techniques.</p>
+    <h1>Latest Posts</h1>
 
+<ul>
+  
+    <li>
+      <h2><a href="/algo/2018/08/22/kiwifruit.html">Kiwifruit</a></h2>
+      <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+berry of several species of woody vines in the genus Actinidia.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/algo/2018/08/21/apples.html">Apples</a></h2>
+      <p>An apple is a sweet, edible fruit produced by an apple tree.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/qc/2018/08/20/bananas.html">Bananas</a></h2>
+      <p>A banana is an edible fruit – botanically a berry – produced by several kinds
+of large herbaceous flowering plants in the genus Musa.</p>
+
+    </li>
+  
+</ul>
   </body>
 </html>

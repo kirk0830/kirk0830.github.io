@@ -1,47 +1,4 @@
-<!doctype html>
-<html>
-  <head>
-    <!--头部分用来声明include调用库，以及设置部分格式-->
-    <meta charset="utf-8">
-    <!-- encoding: utf-8 -->
-    <title>About</title>
-    <!-- 显示当前页面（page）的标题，前提是page.title确实存在且可以访问 -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- 链接stylesheet以设置部分格式，比如styles.css已经设置了inlcude main.css -->
-    <!-- main.css中定义了对于“current”，指定其字体显示为绿色。 -->
-    
-  </head>
-  <body>
-    <!--体部分用来显示，首先显示navigation.html内容，然后是剩余内容，如果剩余内容中还有模板-->
-    <!--则再调用下一层模板-->
-    <nav>
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/" >Home</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/about.html" class="current">About</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/article.html" >Article</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/category.html" >Category</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-</nav>
-    <h1 id="about">About</h1>
+I"�<h1 id="about">About</h1>
 
 <p>大家好。
 在这个站点设立之前，相关内容一直都是发布在知乎。然而因为种种原因，知乎禁止了我的正常使用。根据以往知乎记录在案我的违规，日期最近一条是我在“想法”分享了题为<a href="https://mp.weixin.qq.com/s/7i3gitv9YY8r_QVDFGYcog">《不能继续助长部分中国大学生的好逸恶劳思潮》</a>的微信推送，被自动判定为“包含法律法规禁止或可能引起争议的内容”；</p>
@@ -55,10 +12,9 @@
   <p>“funny mud pee.
 你问这种问题，上面这句话我猜你一定懂，并且你也很眼熟。匿名用户？你别匿名啊。
 亚洲人，尤其是中国人，挨了欺负还在劝自己人反省，老外可喜欢看这个。放在90后之前可能还好使，放在现在还好使？
-什么古墓派处世之道PUA课堂。”</p>
+什么古墓派处世之道PUA课堂。”
+判定“包含攻击、歧视、骚扰等不友善内容”</p>
 </blockquote>
-
-<p>判定“包含攻击、歧视、骚扰等不友善内容”。</p>
 
 <p>这不得不提到中国传统文化与外国文化带来人的思想差异。每个中国人从小到大都接受教育是“人不犯我我不犯人”，都被要求知书达理，文质彬彬。然而外国文化并不如此运作。在国外，对自由和人权的重视，使得外国人更倾向于直截了当去表达自己的需求和重视自己的感受，直接地为自己的利益去争取各种各样的机会。因此但凡不直接fight back，在中国文化看来是儒雅、有教养的表现，但在外国文化中的解释则为loser。
 然而回顾十年前出现在各个平台（包含纸质媒介）的内容，经常向人们传播的是“反思反思再反思”的信号。诚然，反思不管对于个人还是集体都必不可少，然而反思是自己私下要做的功课，不是面对敌人的拳头打过来时要面对敌人，现场要做的功课。利用刻在骨子里的中国文化处理来自外界的侵权行为，到现在还在鼓吹这种思想的人不可不怀疑其立场，不可不怀疑其居心。</p>
@@ -79,6 +35,4 @@ Fight for our motherland, our dignity, our freedom, our friends and families.
 Fight for communism.</p>
 
 <p>Kirk, 2022/03/26 in France</p>
-
-  </body>
-</html>
+:ET

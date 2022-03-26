@@ -6,15 +6,16 @@ markdown: Kramdown
 # website structure related
 
 collections:
-  authors:
+  categories:
     output: true
-    
+
+# 这里是为了设置layout，即文档模板的默认值，每一个scope对应一个value，value给定_layouts中一种模板。
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "categories"
     values:
-      layout: "author"
+      layout: "category"
   - scope:
       path: ""
       type: "posts"
@@ -24,9 +25,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-

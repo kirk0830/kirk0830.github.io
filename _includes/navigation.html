@@ -1,5 +1,9 @@
 <nav>
     {% for item in site.data.navigation %}
+    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
     <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
+    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
+    <!-- 就标记为绿色:“current” -->
     {% endfor %}
 </nav>

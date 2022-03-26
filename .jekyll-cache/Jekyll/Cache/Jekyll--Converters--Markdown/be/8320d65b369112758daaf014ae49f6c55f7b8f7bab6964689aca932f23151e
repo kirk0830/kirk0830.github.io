@@ -1,47 +1,4 @@
-<!doctype html>
-<html>
-  <head>
-    <!--头部分用来声明include调用库，以及设置部分格式-->
-    <meta charset="utf-8">
-    <!-- encoding: utf-8 -->
-    <title>About</title>
-    <!-- 显示当前页面（page）的标题，前提是page.title确实存在且可以访问 -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- 链接stylesheet以设置部分格式，比如styles.css已经设置了inlcude main.css -->
-    <!-- main.css中定义了对于“current”，指定其字体显示为绿色。 -->
-    
-  </head>
-  <body>
-    <!--体部分用来显示，首先显示navigation.html内容，然后是剩余内容，如果剩余内容中还有模板-->
-    <!--则再调用下一层模板-->
-    <nav>
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/" >Home</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/about.html" class="current">About</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/article.html" >Article</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-    <!-- 访问位于_data文件夹navigation.yml中内容，把每一个条目赋值给item并循环 -->
-    <a href="/category.html" >Category</a>
-    <!-- 插入链接item的数据成员Link，并且显示名字为item数据成员name -->
-    <!-- 也使用绿色标记了当前访问界面为绿色标识，其中page是指当前页面，即当前页面的url如果就是item的link -->
-    <!-- 就标记为绿色:“current” -->
-    
-</nav>
-    <h1 id="about">About</h1>
+I"�<h1 id="about">About</h1>
 
 <p>大家好。
 在这个站点设立之前，相关内容一直都是发布在知乎。然而因为种种原因，知乎禁止了我的正常使用。根据以往知乎记录在案我的违规，日期最近一条是我在“想法”分享了题为<a href="https://mp.weixin.qq.com/s/7i3gitv9YY8r_QVDFGYcog">《不能继续助长部分中国大学生的好逸恶劳思潮》</a>的微信推送，被自动判定为“包含法律法规禁止或可能引起争议的内容”；</p>
@@ -79,6 +36,4 @@ Fight for our motherland, our dignity, our freedom, our friends and families.
 Fight for communism.</p>
 
 <p>Kirk, 2022/03/26 in France</p>
-
-  </body>
-</html>
+:ET
