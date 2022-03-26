@@ -1,8 +1,14 @@
+title: Qc_1st-principle_u_need_2_know
+description: another self-established platform for sharing knowledge about quantum chemistry, first-principles and simulation techniques.
 theme: jekyll-theme-cayman
+markdown: maruku
+
+# website structure related
+
 collections:
   authors:
     output: true
-
+    
 defaults:
   - scope:
       path: ""
@@ -24,5 +30,3 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-title: Qc_1st-principle_u_need_2_know
-description: another self-established platform for sharing knowledge about quantum chemistry, first-principles and simulation techniques.
