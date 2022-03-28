@@ -1,0 +1,417 @@
+@import "normalize";
+@import "rouge-github";
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* 定义三种“混入”（mix-in），然后以@include来使用定义好的mixin */
+@mixin large {
+  @media screen and (min-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$medium-breakpoint}) {
+    @content;
+  }
+}
+
+/* mixin实际上是一种模板库         */
+/* 例如                           */
+/* @mixin important-text {        */
+/*   color: red;                  */
+/*   font-size: 25px;             */
+/*   font-weight: bold;           */
+/*   border: 1px solid blue;      */
+/* }                              */
+/* 使用这个mixin                  */
+/* .danger {                      */
+/*   @include important-text;     */
+/*   background-color: green;     */
+/* }                              */
+/* 编译得到                        */
+/* .danger {                      */
+/*   color: red;               <- */
+/*   font-size: 25px;          <- */
+/*   font-weight: bold;        <- */
+/*   border: 1px solid blue;   <- */
+/*   background-color: green;     */
+/* }                              */
+
+* {
+  box-sizing: border-box;
+}
+
+/*  */
+/* 指定body标签的默认格式，在html中以<body></body>使用 */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $body-text-color;
+}
+/* css id选择器，当对象被设置id为skip-to-content时，会被赋予以下格式 */
+#skip-to-content {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+  /* 注意！当定义其伪类时，是在其内部定义！注意最外面的大括号始终没有close! */
+  &:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: auto;
+    width: auto;
+    background: invert($body-link-color);
+    outline: thick solid invert($body-link-color);
+  }
+}
+/* 标签<a></a>格式设置 */
+a {
+  color: $body-link-color;
+  text-decoration: none;
+  /* 原定义方式为a:hover，此处因为a指定了属性之后对hover进行补充，因此使用& */
+  /* :hover实际上是伪类，归属于anchor伪类，anchor伪类的声明遵循严格声明顺序 */
+  /* :link, :visited, :hover, :active，即可以允许其中有伪类不出现，但是不允许出现但调换顺序 */
+  &:hover {
+    text-decoration: underline;
+  }
+}
+/* .btn是class选择器，当标签被指定为class="btn"，会应用此格式 */
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  /* + 相邻兄弟选择器，指如果btn后是另一个btn，且两个btn处于同一个层级，则应用如下设置 */
+  /* ~ 后续兄弟选择器，即出现在之后的所有这个兄弟元素都应用如下设置 */
+  + .btn {
+    margin-left: 1rem;
+  }
+
+  @include large {
+    padding: 0.75rem 1rem;
+  }
+
+  @include medium {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  @include small {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+
+    + .btn {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+}
+/* class="page-header" */
+.page-header {
+  color: $header-heading-color;
+  text-align: center;
+  background-color: $header-bg-color;
+  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+
+  @include large {
+    padding: 5rem 6rem;
+  }
+
+  @include medium {
+    padding: 3rem 4rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+  }
+}
+/* class="project-name" */
+.project-name {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+
+  @include large {
+    font-size: 3.25rem;
+  }
+
+  @include medium {
+    font-size: 2.25rem;
+  }
+
+  @include small {
+    font-size: 1.75rem;
+  }
+}
+/* class=project-tagline */
+.project-tagline {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  opacity: 0.7;
+
+  @include large {
+    font-size: 1.25rem;
+  }
+
+  @include medium {
+    font-size: 1.15rem;
+  }
+
+  @include small {
+    font-size: 1rem;
+  }
+}
+/* class="main-content" */
+.main-content {
+  word-wrap: break-word;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  @include large {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+  /* 在<main>..</main>里，<kbd>标签会被设置成如下格式 */
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+  }
+  /* 在<main>..</main>里，<img>标签会被设置成如下格式 */
+  img {
+    max-width: 100%;
+  }
+  /* 在<main>..</main>里，<h>标签会被设置成如下格式 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $section-headings-color;
+  }
+  /* 在<main>..</main>里，<p>标签会被设置成如下格式 */
+  p {
+    margin-bottom: 1em;
+  }
+  /* 在<main>..</main>里，<code>标签会被设置成如下格式 */
+  code {
+    padding: 2px 4px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9rem;
+    color: $code-text-color;
+    background-color: $code-bg-color;
+    border-radius: 0.3rem;
+  }
+  /* 在<main>..</main>里，<pre>标签会被设置成如下格式 */
+  pre {
+    padding: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    color: $code-text-color;
+    word-wrap: normal;
+    background-color: $code-bg-color;
+    border: solid 1px $border-color;
+    border-radius: 0.3rem;
+
+    > code {
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: $code-text-color;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+  }
+  /* 在<main>..</main>里，class="highlight"属性的元素会被设置成如下格式 */
+  .highlight {
+    margin-bottom: 1rem;
+    /* 在<main>..</main>里，class="highlight"属性的元素，<pre>会被设置成如下格式 */
+    pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+  }
+  /* 分组选择器+嵌套选择器，.highlight pre指包含class="highlight"的pre标签 */
+  /* ","以及单纯的pre标签 */
+  /* pre标签内容为保留空格和回车的文本, https://www.runoob.com/tags/tag-pre.html */
+  .highlight pre,
+  pre {
+    padding: 0.8rem;
+    overflow: auto;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    border-radius: 0.3rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* 组合选择器 */
+  /* pre code意思为包含在<pre>中的<code> */
+  /* pre>code意思为仅仅<pre>的子标签<code>应用该属性, 而其他级别<code>均不适用 */
+  pre code,
+  pre tt {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+
+    /* :before和:after伪元素，以pre tt:before调用，意为在这个标签之前插入内容，或 */
+    /* :after在标签之后插入动作 */
+    /* syntax： selector:pseudo-element OR selector.class:pseudo-element */
+    /* https://www.runoob.com/css/css-pseudo-elements.html */
+    &:before,
+    &:after {
+      content: normal;
+    }
+  }
+  /* 无序列表和有序列表设定 */
+  ul,
+  ol {
+    margin-top: 0;
+  }
+
+  blockquote {
+    padding: 0 1rem;
+    margin-left: 0;
+    color: $blockquote-text-color;
+    border-left: 0.3rem solid $border-color;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  /* css定义表格属性, <table>..</table> */
+  table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    -webkit-overflow-scrolling: touch;
+    /* <th>..</th>标签格式设定 */
+    th {
+      font-weight: bold;
+    }
+    /* 再统一进行<th>..</th>和<td>..</td>标签格式设定 */
+    /* td: table data, th: table header */
+    th,
+    td {
+      padding: 0.5rem 1rem;
+      border: 1px solid $table-border-color;
+    }
+  }
+  /* <dl>..</dl> */
+  dl {
+    padding: 0;
+    /* <dt>..</dt> */
+    dt {
+      padding: 0;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    /* <dd>..</dd> */
+    dd {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  /* <hr>..</hr> */
+  hr {
+    height: 2px;
+    padding: 0;
+    margin: 1rem 0;
+    background-color: $hr-border-color;
+    border: 0;
+  }
+}
+
+/* class="site-footer" */
+.site-footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px $hr-border-color;
+
+  @include large {
+    font-size: 1rem;
+  }
+
+  @include medium {
+    font-size: 1rem;
+  }
+
+  @include small {
+    font-size: 0.9rem;
+  }
+}
+
+/* class="site-footer-owner" */
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+/* class="site-footer-credits" */
+.site-footer-credits {
+  color: $blockquote-text-color;
+}
